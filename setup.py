@@ -79,10 +79,10 @@ if __name__ == "__main__":
         if line.rstrip().startswith('Mem:'):
             memAvailable = int(line.split()[1])
     # Give room for swap space
-    if memAvailable < 900:
+    if memAvailable < 200:
         sys.exit('Less than 1GB of memory. You need more than this to continue.')
     if installType == '1':
-        if memAvailable < 1800:
+        if memAvailable < 300:
             sys.exit('Less than 2GB of memory available.  Consider splitting installs across multiple devices.')
 
     # Install prerequisites
